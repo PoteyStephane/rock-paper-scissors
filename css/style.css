@@ -1,0 +1,84 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  all: unset;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.scoring-board,
+.img-block {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.scoring-board {
+  border: 1px solid crimson;
+}
+
+.img-block {
+  border: 1px solid darkblue;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid crimson;
+  padding: 5px 20px;
+  border-radius: 2px;
+  transition: 0.1s ease-out;
+}
+button:hover {
+  background: crimson;
+  color: white;
+}
+
+.hide {
+  visibility: hidden;
+}/*# sourceMappingURL=style.css.map */

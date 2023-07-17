@@ -1,0 +1,32 @@
+@use "../abstracts/" as *;
+
+.scoring-board,
+.img-block {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.scoring-board {
+  border: 1px solid crimson;
+}
+
+.img-block {
+  border: 1px solid darkblue;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid crimson;
+  padding: 5px 20px;
+  border-radius: 2px;
+  transition: 0.1s ease-out;
+
+  &:hover {
+    background: crimson;
+    color: white;
+  }
+}
+
+.hide {
+  visibility: hidden;
+}
