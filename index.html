@@ -12,18 +12,20 @@
 
     <h1>I'll update the UI step by step but the main backend code works well ! Thank you !</h1>
     <div class="player-information">
-        <h2>put your name and type enter</h2>
-        <form action="" id="myForm">
-            <div class="player-inputName">
-                <input type="text" name="" id="inputPlayerName" placeholder="player name">
-            </div>
-            <select name="round" id="round-inputNumber">
-                <option value="">--Please choose your number of round</option>
-                <option value="3">3</option>
-                <option value="5">5</option>
-            </select>
-            <input type="submit" value="Enter">
-        </form>
+        <div class="container">
+            <h2 id="msg-information">put your name and type/click on enter</h2>
+            <form action="" id="myForm">
+                <div class="player-inputName">
+                    <input type="text" name="" id="inputPlayerName" placeholder="player name">
+                </div>
+                <select name="round" id="round-inputNumber">
+                    <option value="">Choose the number of rounds</option>
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                </select>
+                <input type="submit" value="Enter">
+            </form>
+        </div>
     </div>
 
     <div class="main-game">
@@ -55,10 +57,10 @@
         <p id="computerChoice"></p>
 
         <div class="btns">
-            <button class="btn-selection" id="rock">rock</button>
-            <button class="btn-selection" id="paper">paper</button>
-            <button class="btn-selection" id="scissors">scissors</button>
-            <button id="restart">restart</button>
+            <button class="btn-selection btn-game" id="rock">rock</button>
+            <button class="btn-selection btn-game" id="paper">paper</button>
+            <button class="btn-selection btn-game" id="scissors">scissors</button>
+            <button id="restart btn-game">restart</button>
         </div>
 
         <div>

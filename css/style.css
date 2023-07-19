@@ -53,6 +53,72 @@ h6 {
   overflow-wrap: break-word;
 }
 
+.player-information {
+  width: 800px;
+  height: 250px;
+  border: 2px solid darkblue;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player-information .container h2 {
+  text-transform: capitalize;
+}
+.player-information .container form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5px;
+}
+.player-information .container form input[type=text] {
+  outline: none;
+  margin: 15px;
+  padding: 7px 0 7px 14px;
+  border: 3px solid rgb(255, 65, 65);
+  box-shadow: 0px 0px 0px 1px rgb(223, 19, 19), inset 0px 0px 0px 1px rgb(255, 19, 19), 1px 2px 0px 2px rgb(255, 100, 100);
+  border-radius: 0.3em;
+  color: rgb(255, 19, 19);
+  font-weight: 700;
+  font-size: 1.3em;
+}
+.player-information .container form input[type=text]::-moz-placeholder {
+  text-transform: capitalize;
+  text-align: center;
+  color: black;
+}
+.player-information .container form input[type=text]::placeholder {
+  text-transform: capitalize;
+  text-align: center;
+  color: black;
+}
+.player-information .container form input[type=submit] {
+  outline: none;
+  padding: 5px 15px;
+  border: 3px solid crimson;
+  background-color: crimson;
+  box-shadow: 0px 0px 0px 1px rgb(71, 33, 33), inset 0px 0px 0px 1px rgb(88, 25, 25), 0px 2px 0px 2px rgb(212, 23, 23);
+}
+.player-information .container form #round-inputNumber {
+  outline: none;
+  margin: 15px;
+  padding: 7px 0 7px 14px;
+  border: 3px solid rgb(150, 150, 150);
+  box-shadow: 0px 0px 0px 1px rgb(90, 90, 90), inset 0px 0px 0px 1px rgb(90, 90, 90), 1px 2px 0px 2px rgb(100, 100, 100);
+  border-radius: 0.3em;
+  color: rgb(50, 50, 50);
+  font-weight: 700;
+  font-size: 1.3em;
+}
+.player-information .container form option {
+  text-align: center;
+}
+.player-information .container form option:first-child {
+  color: red;
+  text-transform: capitalize;
+}
+
 .scoring-board,
 .img-block {
   margin: 0 auto;
@@ -67,16 +133,23 @@ h6 {
   border: 1px solid darkblue;
 }
 
-button {
+button,
+input[type=submit] {
   cursor: pointer;
   border: 1px solid crimson;
   padding: 5px 20px;
   border-radius: 2px;
   transition: 0.1s ease-out;
-}
-button:hover {
-  background: crimson;
+  cursor: pointer;
   color: white;
+}
+button:hover,
+input[type=submit]:hover {
+  background: crimson;
+}
+
+.btn-game {
+  color: black;
 }
 
 .hide {

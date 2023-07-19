@@ -17,6 +17,7 @@ const txtComputerScore = document.getElementById("computer-score");
 const txtGameRoundScore = document.getElementById("played-game-count");
 const txtWinnerName = document.getElementById("winner-name");
 const txtRoundNumber = document.getElementById("round-number");
+const txtMsgInformation = document.getElementById("msg-information");
 
 //Buttons
 const btnsSelection = document.querySelectorAll(".btn-selection");
@@ -27,9 +28,12 @@ const computerChoices = ["rock", "paper", "scissors"];
 const tieResult = "TIE";
 const playerResult = "PLAYER WON";
 const computerResult = "COMPUTER WON";
+const alertMessage = "Please enter your name and chose number of rounds !";
+
+const computerChoice = getComputerChoice();
 
 //Functions sections
-hideContent(mainGamePage);
+//hideContent(mainGamePage);
 
 function hideContent(className) {
   className.classList.add("hide");
@@ -92,6 +96,7 @@ function checkIfEndGame() {
     ) {
       checkWinner();
       endGame = true;
+      disableButtons();
       showContent(btnRestart);
     }
   }
@@ -103,15 +108,31 @@ function checkIfEndGame() {
     ) {
       checkWinner();
       endGame = true;
+      disableButtons();
       showContent(btnRestart);
     }
   }
 }
 
+function enableButtons() {
+  btnsSelection.forEach((btns) => {
+    btns.disabled = false;
+  });
+}
+
+function disableButtons() {
+  btnsSelection.forEach((btns) => {
+    btns.disabled = true;
+  });
+}
+
 function playGame() {
   const playerChoice = this.id;
+  const computerChoice = getComputerChoice();
+  console.log("player chose : " + playerChoice);
+  console.log("computer chose : " + computerChoice);
   if (!endGame) {
-    const result = playRound(playerChoice, getComputerChoice());
+    const result = playRound(playerChoice, computerChoice);
     updateCount(result);
     checkIfEndGame();
   }
@@ -125,7 +146,7 @@ function restarGame() {
   txtWinnerName.textContent = "";
   inputSelectOption.selectedIndex = 0;
   showContent(playerInformationPage);
-  hideContent(mainGamePage);
+  //hideContent(mainGamePage);
   hideContent(btnRestart);
   endGame = false;
 }
@@ -145,7 +166,8 @@ function validateOptions(e) {
     hideContent(playerInformationPage);
     hideContent(btnRestart);
   } else {
-    alert("Please enter your name and chose number of round");
+    txtMsgInformation.textContent = alertMessage;
+    txtMsgInformation.style.color = "crimson";
     return;
   }
 }
