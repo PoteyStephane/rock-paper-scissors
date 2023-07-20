@@ -34,7 +34,7 @@ const alertMessage = "Please enter your name and chose number of rounds !";
 const computerChoice = getComputerChoice();
 
 //Functions sections
-//hideContent(mainGamePage);
+hideContent(mainGamePage);
 
 function hideContent(className) {
   className.classList.add("hide");
