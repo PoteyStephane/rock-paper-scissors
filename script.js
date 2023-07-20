@@ -20,7 +20,8 @@ const txtRoundNumber = document.getElementById("round-number");
 const txtMsgInformation = document.getElementById("msg-information");
 
 //Buttons
-const btnsSelection = document.querySelectorAll(".btn-selection");
+// const btnsSelection = document.querySelectorAll(".btn-selection");
+const btnsSelection = document.querySelectorAll(".btn-rps");
 const btnRestart = document.getElementById("restart");
 
 const playerChoices = ["rock", "paper", "scissors"];
@@ -129,8 +130,6 @@ function disableButtons() {
 function playGame() {
   const playerChoice = this.id;
   const computerChoice = getComputerChoice();
-  console.log("player chose : " + playerChoice);
-  console.log("computer chose : " + computerChoice);
   if (!endGame) {
     const result = playRound(playerChoice, computerChoice);
     updateCount(result);
@@ -146,8 +145,9 @@ function restarGame() {
   txtWinnerName.textContent = "";
   inputSelectOption.selectedIndex = 0;
   showContent(playerInformationPage);
-  //hideContent(mainGamePage);
+  hideContent(mainGamePage);
   hideContent(btnRestart);
+  enableButtons();
   endGame = false;
 }
 
@@ -159,7 +159,6 @@ function validateOptions(e) {
     (selectedIndexOption === 1 || selectedIndexOption === 2)
   ) {
     playerName.textContent = inputPlayerName.value;
-
     inputPlayerName.value = "";
     roundNumber.textContent = inputSelectOption.value;
     showContent(mainGamePage);

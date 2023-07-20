@@ -30,37 +30,40 @@
 
     <div class="main-game">
         <div class="scoring-board">
-            <h1>score</h1>
-            <div class="score">
-                <h2 id="playerName">Player</h2>
-                <p id="player-score">0</p>
+            <h1>Scoring</h1>
+            <h2>Round number : <span id="round-number"></span></h2>
+            <div class="main-score-panel">
+                <div class="player-score">
+                    <h2 id="playerName">Player</h2>
+                    <p id="player-score">0</p>
+                </div>
+                <div class="score">
+                    <h2>Computer</h2>
+                    <p id="computer-score">0</p>
+                </div>
             </div>
 
-            <div class="score">
-                <h2>Computer</h2>
-                <p id="computer-score">0</p>
-            </div>
+
 
             <div class="score">
-                <h2>Round number : <span id="round-number"></span></h2>
                 <h2>Game Played : <span id="played-game-count"></span></h2>
             </div>
         </div>
 
         <div class="img-block">
-            <img src="images/rock.png" alt="">
-            <img src="images/paper.png" alt="">
-            <img src="images/scissors.png" alt="">
+            <button class="btn-rps btn-game" id="rock"><img src="images/rock.png" alt=""></button>
+            <button class="btn-rps btn-game" id="paper"><img src="images/paper.png" alt=""></button>
+            <button class="btn-rps btn-game" id="rock"><img src="images/scissors.png" alt=""></button>
         </div>
 
         <p id="playerChoice"></p>
         <p id="computerChoice"></p>
 
         <div class="btns">
-            <button class="btn-selection btn-game" id="rock">rock</button>
+            <!-- <button class="btn-selection btn-game" id="rock">rock</button>
             <button class="btn-selection btn-game" id="paper">paper</button>
-            <button class="btn-selection btn-game" id="scissors">scissors</button>
-            <button id="restart btn-game">restart</button>
+            <button class="btn-selection btn-game" id="scissors">scissors</button> -->
+            <button id="restart">restart</button>
         </div>
 
         <div>

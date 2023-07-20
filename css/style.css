@@ -125,26 +125,49 @@ h6 {
   width: 80%;
 }
 
-.scoring-board {
-  border: 1px solid crimson;
-}
-
-.img-block {
-  border: 1px solid darkblue;
-}
-
-button,
+.btn-rps,
 input[type=submit] {
   cursor: pointer;
-  border: 1px solid crimson;
   padding: 5px 20px;
   border-radius: 2px;
   transition: 0.1s ease-out;
   cursor: pointer;
   color: white;
 }
-button:hover,
-input[type=submit]:hover {
+
+.main-game {
+  text-align: center;
+  text-transform: capitalize;
+}
+.main-game h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.main-game .scoring-board {
+  margin: 5px auto;
+}
+.main-game .scoring-board .main-score-panel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.main-game .img-block {
+  padding: 5px 10px;
+  width: 1000px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.main-game .img-block .btn-rps img {
+  padding: 25px 35px;
+  display: block;
+  border-radius: 100px;
+  transition: all 1s ease;
+}
+.main-game .img-block .btn-rps img:hover {
   background: crimson;
 }
 
