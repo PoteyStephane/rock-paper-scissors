@@ -171,26 +171,6 @@ function validateOptions(e) {
   }
 }
 
-// myForm.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   const selectedIndexOption = inputSelectOption.selectedIndex;
-//   if (
-//     inputPlayerName.value !== "" &&
-//     (selectedIndexOption === 1 || selectedIndexOption === 2)
-//   ) {
-//     playerName.textContent = inputPlayerName.value;
-
-//     inputPlayerName.value = "";
-//     roundNumber.textContent = inputSelectOption.value;
-//     showContent(mainGamePage);
-//     hideContent(playerInformationPage);
-//     hideContent(btnRestart);
-//   } else {
-//     alert("Please enter your name and chose number of round");
-//     return;
-//   }
-// });
-
 myForm.addEventListener("submit", validateOptions);
 btnsSelection.forEach((btn) => btn.addEventListener("click", playGame));
 btnRestart.addEventListener("click", restarGame);
