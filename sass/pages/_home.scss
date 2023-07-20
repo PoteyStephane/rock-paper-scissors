@@ -3,7 +3,7 @@
 .player-information {
   width: 800px;
   height: 250px;
-  border: 2px solid darkblue;
+  border: 2px solid white;
   margin: 0 auto;
   @include flex-center;
 
@@ -37,10 +37,12 @@
       }
 
       input[type="submit"] {
+        text-transform: uppercase;
+        font-weight: bold;
         outline: none;
         padding: 5px 15px;
-        border: 3px solid crimson;
-        background-color: crimson;
+        border: 3px solid white;
+        background-color: whitesmoke;
         box-shadow: 0px 0px 0px 1px rgb(71, 33, 33),
           inset 0px 0px 0px 1px rgb(88, 25, 25),
           0px 2px 0px 2px rgb(212, 23, 23);
@@ -77,15 +79,14 @@
   width: 80%;
 }
 
-.btn-rps,
-input[type="submit"] {
-  cursor: pointer;
-  padding: 5px 20px;
-  border-radius: 2px;
-  transition: 0.1s ease-out;
-  cursor: pointer;
-  color: white;
-}
+// .btn-rps,
+// input[type="submit"] {
+//   cursor: pointer;
+//   padding: 5px 20px;
+//   border-radius: 2px;
+//   transition: all 1s ease;
+//   color: white;
+// }
 
 .main-game {
   text-align: center;
@@ -112,19 +113,6 @@ input[type="submit"] {
     margin: 10px auto;
     @include flex-center;
     gap: 15px;
-
-    .btn-rps {
-      img {
-        padding: 25px 35px;
-        display: block;
-        border-radius: 100px;
-        transition: all 1s ease;
-
-        &:hover {
-          background: crimson;
-        }
-      }
-    }
   }
 }
 
